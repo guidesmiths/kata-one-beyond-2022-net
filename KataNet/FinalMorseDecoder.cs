@@ -3,7 +3,6 @@ using BenchmarkDotNet.Attributes;
 
 namespace KataNet;
 
-[RankColumn]
 public class FinalMorseDecoder : MorseDecoder
 {
 	[Benchmark]
