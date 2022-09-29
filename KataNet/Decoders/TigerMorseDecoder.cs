@@ -1,4 +1,5 @@
 using System.Text.RegularExpressions;
+using BenchmarkDotNet.Attributes;
 
 namespace KataNet;
 
@@ -44,6 +45,7 @@ public class TigerMorseDecoder : MorseDecoder
         ["-----"] = '0'
     };
 
+    [Benchmark]
     public override string DecodeMisteryMessage()
     {
         var item = Regex.Replace(MisteryMessage, "[.-]+", x => Dictionary[x.Value].ToString());
