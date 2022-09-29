@@ -7,7 +7,7 @@ using BenchmarkDotNet.Attributes;
 
 namespace KataNet
 {
-	internal class PantherMorseDecoder : MorseDecoder
+	public class PantherMorseDecoder : MorseDecoder
 	{
 		[Benchmark]
 		public override string DecodeMisteryMessage()
