@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BenchmarkDotNet.Attributes;
 
 namespace KataNet
 {
 	internal class PantherMorseDecoder : MorseDecoder
 	{
+		[Benchmark]
 		public override string DecodeMisteryMessage()
 		{
 			var morseDict = new Dictionary<string, string>()
